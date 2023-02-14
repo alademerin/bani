@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import DescriptionCard, {
+  CustomerDetailsCard,
+  PaymentCard,
+  PaymentCard2,
+} from "./components/DescriptionCard/DescriptionCard";
+import { SecurityImgContainer, Container } from "./App.styled";
+import Security from "./assets/security.png";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <>
+      <Container className="App">
+        <div>
+          <DescriptionCard />
+          <CustomerDetailsCard />
+        </div>
+        <PaymentCard />
+        {/* <PaymentCard2 /> */}
+      </Container>
+      <SecurityImgContainer>
+        <img src={Security} />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Do you have any questions, visit our website <a href="#">bani.africa</a>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      </SecurityImgContainer>
+    </>
   );
 }
 
